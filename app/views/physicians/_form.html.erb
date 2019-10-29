@@ -24,16 +24,20 @@
   <div class="actions">
     <%= form.submit %>
   </div>
+ <% if false %>
   <h3>Offices</h3>
   <div id ='offices'>
-    <%= f.fields_for :offices do |office| %>
+    <%= form.fields_for :offices do |office| %>
     <%= render 'office_fields', :f => office %>
     <% end %>
 
   <div class='links'>
-  <%=links_to_add_association 'add Office',f,:offices %>
+  <%=links_to_add_association 'Add Office',f,:offices %>
   </div>
   </div>
   <%=f.submit 'Save' %>
+
+  unable to get the association to work properly
+  <% end %>
   <% end %>
 
